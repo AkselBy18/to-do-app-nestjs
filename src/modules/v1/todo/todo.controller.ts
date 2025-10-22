@@ -45,7 +45,6 @@ export class TodoController {
     @Query('priority') priority?: 'low' | 'medium' | 'hight',
     @Query('done') done?: boolean
   ) {
-    console.log('get data process', page, limit, priority, done)
     try {
       return ResponseHandler.success(
         await this.todoService.processGetAll(token, page, limit, priority, done),
