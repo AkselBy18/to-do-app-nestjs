@@ -3,13 +3,18 @@ import { TodoService } from './todo.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { ResponseHandler } from 'src/common/utils/response-handler.util';
 import { UpdateTodoDto } from './dto/update-todo.dto';
+import { ApiBearerAuth, ApiBody, ApiResponse } from '@nestjs/swagger';
+import { CreateTaskResponse, CreateTaskSample, DeleteTaskResponse, GetListTasksResponse, GetOneTaskResponse, UpdateTaskResponse, UpdateTaskSample } from 'src/common/constant/todo/todo.samples';
 
 @Controller('todo')
 export class TodoController {
+  
   constructor(private readonly todoService: TodoService) { }
 
-
   @Post('create')
+  @ApiBearerAuth('token')
+  @ApiBody(CreateTaskSample)
+  @ApiResponse(CreateTaskResponse)
   async create(@Headers('token') token: string, @Body() body: CreateTodoDto) {
     try {
       return ResponseHandler.success(
@@ -22,6 +27,9 @@ export class TodoController {
   }
 
   @Patch('update/:id')
+  @ApiBearerAuth('token')
+  @ApiBody(UpdateTaskSample)
+  @ApiResponse(UpdateTaskResponse)
   async update(
     @Headers('token') token: string,
     @Param('id') id: number,
@@ -38,6 +46,8 @@ export class TodoController {
   }
 
   @Get('list')
+  @ApiBearerAuth('token')
+  @ApiResponse(GetListTasksResponse)
   async getAll(
     @Headers('token') token: string,
     @Query('page') page: number,
@@ -56,6 +66,8 @@ export class TodoController {
   }
 
   @Get('list/:id')
+  @ApiBearerAuth('token')
+  @ApiResponse(GetOneTaskResponse)
   async getOne(@Headers('token') token: string, @Param('id') id: number) {
     try {
       return ResponseHandler.success(
@@ -68,6 +80,8 @@ export class TodoController {
   }
 
   @Delete('list/:id')
+  @ApiBearerAuth('token')
+  @ApiResponse(DeleteTaskResponse)
   async delete(@Headers('token') token: string, @Param('id') id: number) {
     try {
       return ResponseHandler.success(
