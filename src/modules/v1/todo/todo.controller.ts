@@ -1,4 +1,4 @@
-import { Body, Controller, Headers, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Headers, Param, Patch, Post, Query } from '@nestjs/common';
 import { TodoService } from './todo.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { ResponseHandler } from 'src/common/utils/response-handler.util';
@@ -34,6 +34,49 @@ export class TodoController {
       )
     } catch (error) {
       return ResponseHandler.error('Error update todo: ' + (error.message ?? JSON.stringify(error)), error.status || 500)
+    }
+  }
+
+  @Get('list')
+  async getAll(
+    @Headers('token') token: string,
+    @Query('page') page: number,
+    @Query('limit') limit: number,
+    @Query('priority') priority?: 'low' | 'medium' | 'hight',
+    @Query('done') done?: boolean
+  ) {
+    console.log('get data process', page, limit, priority, done)
+    try {
+      return ResponseHandler.success(
+        await this.todoService.processGetAll(token, page, limit, priority, done),
+        'Success request get all'
+      );
+    } catch (error) {
+      return ResponseHandler.error('Error get all todo: ' + (error.message ?? JSON.stringify(error)), error.status || 500)
+    }
+  }
+
+  @Get('list/:id')
+  async getOne(@Headers('token') token: string, @Param('id') id: number) {
+    try {
+      return ResponseHandler.success(
+        await this.todoService.processGetOne(token, id),
+        'Success request get todo'
+      );
+    } catch (error) {
+      return ResponseHandler.error('Error get todo: ' + (error.message ?? JSON.stringify(error)), error.status || 500)
+    }
+  }
+
+  @Delete('list/:id')
+  async delete(@Headers('token') token: string, @Param('id') id: number) {
+    try {
+      return ResponseHandler.success(
+        await this.todoService.processDelete(token, id),
+        'Success request delete Todo'
+      );
+    } catch (error) {
+      return ResponseHandler.error('Error delete todo: ' + (error.message ?? JSON.stringify(error)), error.status || 500)
     }
   }
 }
