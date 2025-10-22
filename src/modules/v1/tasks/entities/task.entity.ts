@@ -1,11 +1,13 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import { User } from "../../users/entities/user.entity";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, RelationId, UpdateDateColumn } from "typeorm";
 
 @Entity('tasks')
 export class Task {
 
     @PrimaryGeneratedColumn()
     pk_task: number;
+
+    @Column({type: 'varchar', nullable: false})
+    name: string;
 
     @Column({
         type: 'enum',
@@ -31,7 +33,7 @@ export class Task {
         onUpdate: 'CURRENT_TIMESTAMP',
     })
     date_update: Date;
-    
-    @JoinColumn({name: 'fk_user'})
-    user: User
+
+    @Column({type:'int', nullable: false})
+    fk_user: number;
 }

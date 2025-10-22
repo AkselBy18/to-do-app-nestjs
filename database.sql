@@ -11,6 +11,7 @@ create table users (
 
 create table tasks (
     pk_task INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(500) NOT NULL,
     priority ENUM('low', 'medium', 'hight') DEFAULT 'low',
     done BOOLEAN NOT NULL DEFAULT false,
     date_creation DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),

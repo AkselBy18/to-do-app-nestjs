@@ -10,5 +10,8 @@ export const databaseConfig = (configService: ConfigService): TypeOrmModuleOptio
     database: configService.get<string>('DB_NAME'),
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
     synchronize: false,
-    autoLoadEntities: true
+    autoLoadEntities: true,
+    extra: {
+        timezone: 'America/Mexico_City'
+    }
 })

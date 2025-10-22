@@ -9,6 +9,7 @@ import { TasksModule } from './modules/v1/tasks/tasks.module';
 import { AuthModule } from './modules/v1/auth/auth.module';
 import { CryptoService } from './common/services/crypto/crypto.service';
 import { CommonModule } from './common/common.module';
+import { TodoModule } from './modules/v1/todo/todo.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { CommonModule } from './common/common.module';
     TasksModule,
     AuthModule,
     CommonModule,
+    TodoModule,
   ],
   controllers: [AppController],
   providers: [AppService, CryptoService],

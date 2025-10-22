@@ -4,16 +4,25 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './entities/user.entity';
 import { Repository } from 'typeorm';
+import { JwtService } from 'src/common/services/jwt/jwt.service';
 
 @Injectable()
 export class UsersService {
 
   constructor(
-    @InjectRepository(User) private readonly repository: Repository<User>
+    @InjectRepository(User) private readonly repository: Repository<User>,
+    private jwtService: JwtService
   ) {}
 
   public insert(data: CreateUserDto) {
     return this.repository.save(data);
+  }
+
+  public async findByToken(token: string): Promise<User|null>  {
+    if (!token) { return null }
+    const data = await this.jwtService.verify(token);
+    if (!data) { return null }
+    return this.findByEmail(data.email);
   }
 
   public findByEmail(email: string): Promise<User|null> {
