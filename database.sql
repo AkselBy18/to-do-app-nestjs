@@ -4,6 +4,7 @@ USE toDoApp;
 
 create table users (
     pk_user INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(150) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
     password VARCHAR(200) NOT NULL
 );
