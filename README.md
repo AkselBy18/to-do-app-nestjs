@@ -1,49 +1,52 @@
-#ToDoApp - Prueba técnica de back-end creada en con Nestjs.
-Está construida con NestJS, usa MySQL como base de datos y Swagger para la documentación.
+#ToDoApp - Backend technical test created with NestJS.
+It is built with NestJS, uses MySQL as the database, and Swagger for documentation.
 
-#Requisitos previos
-Asegúrate de tener instalado en tu dispositivo los siguientes programas.
+#Prerequisites
+Make sure you have the following programs installed on your device.
 
 - Node.js (https://nodejs.org/en/download) (25.0.0)
 - NPM (https://www.npmjs.com/) (11.6.2)
 - MySQL (Mamp) (https://www.mamp.info/en/downloads/)
 
-#Clonar el respositorio
+#Clone the repository
+
 git clone https://github.com/AkselBy18/to-do-app-nestjs
 cd to-do-app-nestjs
 
-#Instalar las dependencias necesarias
+#Install the necessary dependencies
+
 npm install
 
-#Archivo .env
-Crea el archivo .env con los valores contenidos en .env.sample
+#.env file
+Create the .env file with the values contained in .env.sample
 
-Nota: Este es un proyecto de ejemplo y las credenciales contenidas en el archivo .env son de uso local.
+Note: This is a sample project, and the credentials contained in the .env file are for local use only.
 
-#Creación de la base de datos
-Pasos para iniciar el gestor de base de datos local y crear la base de datos.
+#Database creation
+Steps to start the local database manager and create the database.
 
-Abre la aplicación de MAMP (instalada previamente)
-Haz clic en el botón de "Start"
-Selecciona la opción de Web Server en "Apache"
-Abre el gestor web de base de datos local (http://localhost:8888/phpMyAdmin5/index.php)
-Selecciona la pestaña de "SQL" en el gestor web.
-Copia el contenido del archivo database.sql y ejecútalo para crear la base de datos.
+- Open the MAMP application (previously installed)
+- Click on the "Start" button
+- Select the "Apache" option as Web Server
+- Open the local web database manager (http://localhost:8888/phpMyAdmin5/index.php)
+- Select the "SQL" tab in the web manager.
+- Copy the content of the database.sql file and run it to create the database.
 
-#Ejecutar el proyecto
+#Run the project
+
 nest start --watch
 
-El proyecto se iniciará en: 
+#The project will start at:
 http://localhost:3000
 
-Una vez iniciado, puedes consultar la documentación con el siguiente enlace en el navegador:
+Once started, you can check the documentation at the following link in your browser:
 http://localhost:3000/v1/docs
 
-#Tecnologías utilizadas
+#Technologies used
 
-NestJS - Framework backend de Node.js
-TypeORM - ORM para MySQL
-Swagger - Documentación de API
-MySQL - Base de datos relacional
-Bcrypt - encriptación de datos sensibles
-JWT - autenticación de usuarios por medio de token
+NestJS - Node.js backend framework
+TypeORM - ORM for MySQL
+Swagger - API documentation
+MySQL - Relational database
+Bcrypt - Encryption for sensitive data
+JWT - Token-based user authentication
