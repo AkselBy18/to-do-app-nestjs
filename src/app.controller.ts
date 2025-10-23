@@ -3,10 +3,14 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return `
+      <h1>Welcome to ToDoApp API</h1>
+      <p>API running successfully!</p>
+      <a href="/v1/docs">Open Swagger Docs</a>
+    `;
+
   }
 }

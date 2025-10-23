@@ -20,6 +20,7 @@ npm install
 
 #.env file
 Create the .env file with the values contained in .env.sample
+The file must be located at the root of the project.
 
 Note: This is a sample project, and the credentials contained in the .env file are for local use only.
 

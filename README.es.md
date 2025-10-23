@@ -14,10 +14,13 @@ git clone https://github.com/AkselBy18/to-do-app-nestjs
 cd to-do-app-nestjs
 
 #Instalar las dependencias necesarias
+Ejecuta el comando en la terminal dentro de la carpeta del proyecto /to-do-app-nestjs o desde Visual Studio Code abre la carpeta del proyecto y selecciona la pestaña "Terminal" y "New Terminal"
+
 npm install
 
 #Archivo .env
 Crea el archivo .env con los valores contenidos en .env.sample
+El archivo debe de ir ubicado en la raíz del proyecto. 
 
 Nota: Este es un proyecto de ejemplo y las credenciales contenidas en el archivo .env son de uso local.
 
@@ -32,6 +35,7 @@ Selecciona la pestaña de "SQL" en el gestor web.
 Copia el contenido del archivo database.sql y ejecútalo para crear la base de datos.
 
 #Ejecutar el proyecto
+Para iniciar el proyecto, ejecuta el siguiente comando en la terminal dentro de la carpeta del proyecto /to-do-app-nestjs o desde Visual Studio Code abre la carpeta del proyecto y selecciona la pestaña "Terminal" y "New Terminal"
 nest start --watch
 
 El proyecto se iniciará en: 
