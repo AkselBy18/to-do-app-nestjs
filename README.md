@@ -37,7 +37,7 @@ El proyecto se iniciará en: 
 http://localhost:3000
 
 Una vez iniciado, puedes consultar la documentación con el siguiente enlace en el navegador:
-http://localhost:3000/v1/api-docs
+http://localhost:3000/v1/docs
 
 #Tecnologías utilizadas
 
