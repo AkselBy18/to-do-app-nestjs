@@ -6,6 +6,7 @@ Asegúrate de tener instalado en tu dispositivo los siguientes programas.
 
 - Node.js (https://nodejs.org/en/download) (25.0.0)
 - NPM (https://www.npmjs.com/) (11.6.2)
+- NestJS (npm i -g @nestjs/cli) / (11.0.10)
 - MySQL (Mamp) (https://www.mamp.info/en/downloads/)
 
 #Clonar el respositorio
