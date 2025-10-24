@@ -1,6 +1,16 @@
 # ToDoApp - Back-end technical test created with NestJS.
 It is built with NestJS, uses MySQL as the database and Swagger for documentation.
 
+# Production Deployment
+
+The API is deployed and available at:
+
+Main URL:
+- https://api.todoapp.saltwortdevs.com (Subdomain)
+
+Alternative URL:
+- http://178.16.143.210 (Direct IP)
+
 # Prerequisites
 Make sure you have the following programs installed on your device.
 

@@ -1,6 +1,16 @@
 #ToDoApp - Prueba técnica de back-end creada en con Nestjs.
 Está construida con NestJS, usa MySQL como base de datos y Swagger para la documentación.
 
+#Despliegue en Producción
+
+El API está desplegado y disponible en:
+
+URL Principal:
+- https://api.todoapp.saltwortdevs.com (Subdominio)
+
+URL Alternativa:
+- http://178.16.143.210 (IP directa)
+
 #Requisitos previos
 Asegúrate de tener instalado en tu dispositivo los siguientes programas.
 
