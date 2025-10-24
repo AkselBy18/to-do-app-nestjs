@@ -6,7 +6,7 @@ Está construida con NestJS, usa MySQL como base de datos y Swagger para la docu
 El API está desplegado y disponible en:
 
 URL Principal:
-- https://api.todoapp.saltwortdevs.com (Subdominio)
+- http://api.todoapp.saltwortdevs.com (Subdominio)
 
 URL Alternativa:
 - http://178.16.143.210 (IP directa)

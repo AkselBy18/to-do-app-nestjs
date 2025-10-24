@@ -6,7 +6,7 @@ It is built with NestJS, uses MySQL as the database and Swagger for documentatio
 The API is deployed and available at:
 
 Main URL:
-- https://api.todoapp.saltwortdevs.com (Subdomain)
+- http://api.todoapp.saltwortdevs.com (Subdomain)
 
 Alternative URL:
 - http://178.16.143.210 (Direct IP)
