@@ -34,8 +34,11 @@ Abre el gestor web de base de datos local (http://localhost:8888/phpMyAdmin5/ind
 Selecciona la pestaña de "SQL" en el gestor web.
 Copia el contenido del archivo database.sql y ejecútalo para crear la base de datos.
 
+#Ejecuta las migración de las tablas
+Ejecuta el siguiente comando en la terminal dentro de la carpeta del proyecto /to-do-app-nestjs o desde Visual Studio Code abre la carpeta del proyecto y selecciona la pestaña "Terminal" y "New Terminal"
+npm run migration:run -- -d data-source.ts
+
 #Ejecutar el proyecto
-Para iniciar el proyecto, ejecuta el siguiente comando en la terminal dentro de la carpeta del proyecto /to-do-app-nestjs o desde Visual Studio Code abre la carpeta del proyecto y selecciona la pestaña "Terminal" y "New Terminal"
 nest start --watch
 
 El proyecto se iniciará en: 
