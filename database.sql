@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS toDoApp;
-
+/*
 USE toDoApp;
 
 create table users (
@@ -23,4 +23,4 @@ create table tasks (
         REFERENCES Users(pk_user)
         ON DELETE CASCADE
         ON UPDATE CASCADE
-);
+);*/
